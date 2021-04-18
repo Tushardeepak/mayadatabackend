@@ -10,7 +10,7 @@ app.use(express.json());
 const dbURI =
   "mongodb+srv://tushar1234:1234tushar@cluster0.ysykl.mongodb.net/mayadata?retryWrites=true&w=majority";
 
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
